@@ -1,0 +1,25 @@
+.empty {
+    padding: 46px 24px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--surface)
+}
+
+.rule {
+    width: 32px;
+    height: 2px;
+    margin: 0 auto 18px;
+    background: var(--accent)
+}
+
+.empty h3 {
+    margin: 0 0 7px
+}
+
+.empty p {
+    max-width: 420px;
+    margin: 0 auto 18px;
+    color: var(--muted);
+    font-size: 13px
+}

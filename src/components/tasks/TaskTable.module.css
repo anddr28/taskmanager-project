@@ -1,0 +1,105 @@
+.wrapper {
+    overflow: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card)
+}
+
+.wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px
+}
+
+.wrapper th {
+    height: 36px;
+    padding: 0 12px;
+    border-bottom: 1px solid var(--line);
+    background: #fbfcfd;
+    color: var(--muted);
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600
+}
+
+.wrapper td {
+    height: 42px;
+    padding: 0 12px;
+    border-bottom: 1px solid #edf0f3;
+    color: var(--muted);
+    font-size: 12px;
+    vertical-align: middle
+}
+
+.wrapper tr:last-child td {
+    border-bottom: 0
+}
+
+.wrapper tbody tr {
+    transition: background-color .14s ease
+}
+
+.wrapper tbody tr:hover {
+    background: #f8fafc
+}
+
+.taskCell {
+    width: 32%;
+    max-width: 360px
+}
+
+.taskCell a {
+    display: block;
+    overflow: hidden;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.taskCell a:hover {
+    color: var(--accent)
+}
+
+.taskCell span {
+    display: block;
+    overflow: hidden;
+    margin-top: 2px;
+    color: var(--muted-2);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3px
+}
+
+.actions a,
+.actions button {
+    height: 28px;
+    padding: 0 8px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--muted);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background-color .14s ease, color .14s ease, border-color .14s ease
+}
+
+.actions a:hover {
+    background: var(--accent-soft);
+    color: var(--accent)
+}
+
+.actions button:hover {
+    background: rgba(184, 74, 84, .06);
+    color: var(--danger)
+}

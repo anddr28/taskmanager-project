@@ -1,0 +1,28 @@
+{
+  "name": "taskmanager",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"json-server --watch db.json --port 3001\"",
+    "dev:client": "vite",
+    "dev:api": "json-server --watch db.json --port 3001",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
+    "react-router-dom": "^7.8.2",
+    "zod": "^4.1.5",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "concurrently": "^9.2.1",
+    "json-server": "^1.0.0-beta.3",
+    "vite": "^7.1.3"
+  }
+}

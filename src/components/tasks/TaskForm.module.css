@@ -1,0 +1,106 @@
+.form {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    animation: modal-in .24s cubic-bezier(.2, .8, .2, 1) both
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px
+}
+
+.full {
+    grid-column: 1/-1
+}
+
+.form label {
+    display: grid;
+    gap: 6px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: #fff;
+    color: var(--text);
+    outline: 0;
+    padding: 0 10px;
+    font-size: 13px;
+    transition: border-color .15s ease, box-shadow .15s ease
+}
+
+.form input,
+.form select {
+    height: 40px
+}
+
+.form textarea {
+    padding: 9px 10px;
+    resize: vertical;
+    line-height: 1.5
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--muted-2)
+}
+
+.form input:hover,
+.form textarea:hover,
+.form select:hover {
+    border-color: var(--line-strong)
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+    border-color: var(--accent-line);
+    box-shadow: 0 0 0 3px var(--accent-soft)
+}
+
+.error {
+    color: var(--danger);
+    font-size: 11px;
+    font-weight: 500
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line)
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: scale(.985)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@media(max-width:650px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .full {
+        grid-column: auto
+    }
+}

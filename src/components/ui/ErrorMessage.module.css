@@ -1,0 +1,39 @@
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px 16px;
+    border: 1px solid rgba(184, 74, 84, .22);
+    border-left: 3px solid var(--danger);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-card)
+}
+
+.error strong {
+    color: var(--ink);
+    font-size: 13px
+}
+
+.error p {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 12px
+}
+
+.error button {
+    min-height: 31px;
+    padding: 0 10px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.error button:hover {
+    background: var(--surface-subtle)
+}

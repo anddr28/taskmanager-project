@@ -1,0 +1,103 @@
+.form {
+    display: grid;
+    gap: 13px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    animation: modal-in .24s cubic-bezier(.2, .8, .2, 1) both
+}
+
+.form label {
+    display: grid;
+    gap: 6px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: #fff;
+    color: var(--text);
+    padding: 0 10px;
+    outline: 0;
+    font-size: 13px;
+    transition: border-color .15s ease, box-shadow .15s ease
+}
+
+.form input:not([type=color]) {
+    height: 40px
+}
+
+.form textarea {
+    padding: 9px 10px;
+    resize: vertical;
+    line-height: 1.5
+}
+
+.form input:hover,
+.form textarea:hover {
+    border-color: var(--line-strong)
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: var(--accent-line);
+    box-shadow: 0 0 0 3px var(--accent-soft)
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--muted-2)
+}
+
+.colorRow {
+    display: flex;
+    align-items: center;
+    gap: 9px
+}
+
+.colorRow input[type=color] {
+    width: 36px;
+    height: 32px;
+    padding: 2px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: #fff;
+    cursor: pointer
+}
+
+.colorHint {
+    color: var(--muted);
+    font-size: 11px
+}
+
+.error {
+    color: var(--danger);
+    font-size: 11px
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+    padding-top: 13px;
+    border-top: 1px solid var(--line)
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: scale(.985)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}

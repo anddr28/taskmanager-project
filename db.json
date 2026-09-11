@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Андрей",
+      "email": "demo@taskmanager.local",
+      "password": "demo123",
+      "role": "user"
+    },
+    {
+      "id": "iCFRj-QF-es",
+      "name": "Иван",
+      "email": "ivan@yahoo.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "VuHpmAlWrjw",
+      "name": "artem",
+      "email": "artem@hh.ru",
+      "password": "myhhartem",
+      "role": "user"
+    },
+    {
+      "id": "FRB9F2RYYEc",
+      "name": "Лена",
+      "email": "lena@sar.com",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "name": "TaskManager",
+      "description": "Основной продукт и его интерфейс.",
+      "color": "#2563a6",
+      "ownerId": "u1",
+      "createdAt": "2026-09-01T09:00:00.000Z"
+    },
+    {
+      "id": "p2",
+      "name": "Website",
+      "description": "Обновление корпоративного сайта.",
+      "color": "#64748b",
+      "ownerId": "u1",
+      "createdAt": "2026-09-03T09:00:00.000Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Сверстать страницу задач",
+      "description": "Собрать плотный список задач, фильтры и состояния.",
+      "status": "in-progress",
+      "priority": "high",
+      "projectId": "p1",
+      "authorId": "u1",
+      "assignee": "Андрей",
+      "dueDate": "2026-09-15",
+      "createdAt": "2026-09-08T10:30:00.000Z",
+      "updatedAt": "2026-09-10T14:20:00.000Z",
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Андрей",
+          "text": "Основной список уже готов.",
+          "createdAt": "2026-09-10T14:20:00.000Z"
+        }
+      ],
+      "attachments": [
+        {
+          "id": "a1",
+          "name": "layout-notes.txt",
+          "size": 18240,
+          "type": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Подключить React Router",
+      "description": "Настроить маршруты приложения и защищённую часть SPA.",
+      "status": "done",
+      "priority": "medium",
+      "projectId": "p1",
+      "authorId": "u1",
+      "assignee": "Андрей",
+      "dueDate": "2026-09-11",
+      "createdAt": "2026-09-07T09:15:00.000Z",
+      "updatedAt": "2026-09-09T12:00:00.000Z",
+      "comments": [],
+      "attachments": []
+    },
+    {
+      "id": "3",
+      "title": "Подготовить макеты главной",
+      "description": "Собрать структуру и основные UI-компоненты.",
+      "status": "todo",
+      "priority": "medium",
+      "projectId": "p2",
+      "authorId": "u1",
+      "assignee": "Андрей",
+      "dueDate": "2026-09-20",
+      "createdAt": "2026-09-09T11:00:00.000Z",
+      "updatedAt": "2026-09-09T11:00:00.000Z",
+      "comments": [],
+      "attachments": []
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

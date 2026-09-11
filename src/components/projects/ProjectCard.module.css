@@ -1,0 +1,109 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 220px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+    transition: transform .2s cubic-bezier(.2, .8, .2, 1), box-shadow .2s ease, border-color .15s ease
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-popover);
+    border-color: var(--line-strong)
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.swatch {
+    width: 4px;
+    height: 20px;
+    border-radius: 2px;
+    opacity: .8
+}
+
+.actions {
+    display: flex;
+    gap: 2px
+}
+
+.actions button {
+    height: 28px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 11px
+}
+
+.actions button:hover {
+    background: var(--surface-subtle);
+    color: var(--text)
+}
+
+.card h2 {
+    margin: 25px 0 7px;
+    font-size: 21px
+}
+
+.card p {
+    min-height: 39px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.55
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 19px;
+    color: var(--muted);
+    font-size: 11px
+}
+
+.meta strong {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600
+}
+
+.progress {
+    height: 3px;
+    margin-top: 8px;
+    background: #e8edf1;
+    overflow: hidden
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    transition: width .35s cubic-bezier(.2, .8, .2, 1)
+}
+
+.tasksLink {
+    margin-top: 14px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none
+}
+
+.tasksLink:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px
+}
